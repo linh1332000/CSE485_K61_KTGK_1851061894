@@ -12,7 +12,7 @@
     echo $blood_type;
 
     // Bước 02:
-    $sql = "INSERT INTO PATIENT (firstname, lastname, dateofbirth, gender,mobile, email,height,weight,blood_type)
+    $sql = "INSERT INTO PATIENT (firstname, lastname, dateofbirth, gender,mobile, email,height,weight,id_blood_type)
     VALUES ('$firstname','$lastname','$dateofbirth','$gender','$mobile','$email','$height','$wei_ght','AB')";
 
     echo $sql;
