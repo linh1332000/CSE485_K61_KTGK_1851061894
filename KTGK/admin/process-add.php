@@ -13,7 +13,7 @@
 
     // Bước 02:
     $sql = "INSERT INTO PATIENT (firstname, lastname, dateofbirth, gender,mobile, email,height,weight,id_blood_type)
-    VALUES ('$firstname','$lastname','$dateofbirth','$gender','$mobile','$email','$height','$wei_ght','AB')";
+    VALUES ('$firstname','$lastname','$dateofbirth','$gender','$mobile','$email','$height','$wei_ght',' $blood_type')";
 
     echo $sql;
     $result = mysqli_query($conn,$sql);
