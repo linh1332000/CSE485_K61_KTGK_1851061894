@@ -8,11 +8,11 @@
      $height = $_POST['height'];
      $wei_ght = $_POST['weight'];
      $blood_type = $_POST['bold_type'];
-    $id = $_GET['id'];
+     $id = $_POST['patientid'];
 
     include '../config.php';
     // Bước 02:
-    $sql = "UPDATE benh_nhan SET firstname = '$firstname',lastname='$lastname',dateofbirth ='$dateofbirth', gender='$gender', mobile='$mobile',email ='$email',height='$height',weight='$wei_ght',blood_type='$blood_type' where id='$id'";
+    $sql = "UPDATE benh_nhan SET firstname = '$firstname',lastname='$lastname',dateofbirth ='$dateofbirth', gender='$gender', mobile='$mobile',email ='$email',height='$height',weight='$wei_ght',blood_type='$blood_type' where patientid='$id'";
 
     echo $sql;
     $result = mysqli_query($conn,$sql);
