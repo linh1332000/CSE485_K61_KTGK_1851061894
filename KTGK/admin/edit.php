@@ -3,11 +3,21 @@
     include '../config.php';
     $id = $_GET['id'];
     settype($id,"int");
+    $sql = 'Select patientid from patient';
+    $result_1 = mysqli_query($conn,$sql);
+    $row_1=mysqli_fetch_assoc($result_1)
 ?>
 
     <main class="container">
     <h2>Sửa thông tin bệnh nhân</h2>
         <form action="process-add.php" method="post">
+             <div class="form-group row">
+                <label for="empName" class="col-sm-2 col-form-label">ID:</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" id="patientid" name="patientid" value="<?php echo $row_1['patientid'] ?>" readonly> 
+                </div>
+            </div>
+            <br>
             <div class="form-group row">
                 <label for="empName" class="col-sm-2 col-form-label">Tên:</label>
                 <div class="col-sm-10">
@@ -77,7 +87,7 @@
                             if(mysqli_num_rows($result)){
                                 while($row=mysqli_fetch_assoc($result)){
                                    
-                                   echo '<option value="'.$row['id'].'">'.$row['bold_type'].'</option>';
+                                   echo '<option value="'.$row['id_blood_type'].'">'.$row['bold_type'].'</option>';
                                    
                                 }
                             }
