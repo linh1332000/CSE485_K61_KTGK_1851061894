@@ -75,7 +75,7 @@
                             if(mysqli_num_rows($result)){
                                 while($row=mysqli_fetch_assoc($result)){
                                    
-                                   echo '<option value="'.$row['id'].'">'.$row['bold_type'].'</option>';
+                                   echo '<option value="'.$row['id_blood_type'].'">'.$row['bold_type'].'</option>';
                                    
                                 }
                             }
