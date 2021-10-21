@@ -3,9 +3,7 @@
     include '../config.php';
     $id = $_GET['id'];
     settype($id,"int");
-    $sql = 'Select patientid from patient';
-    $result_1 = mysqli_query($conn,$sql);
-    $row_1=mysqli_fetch_assoc($result_1)
+  
 ?>
 
     <main class="container">
@@ -14,7 +12,7 @@
              <div class="form-group row">
                 <label for="empName" class="col-sm-2 col-form-label">ID:</label>
                 <div class="col-sm-10">
-                <input type="text" class="form-control" id="patientid" name="patientid" value="<?php echo $row_1['patientid'] ?>" readonly> 
+                <input type="text" class="form-control" id="patientid" name="patientid" value="<?php echo $id ?>" readonly> 
                 </div>
             </div>
             <br>
